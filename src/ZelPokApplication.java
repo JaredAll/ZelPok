@@ -1,17 +1,16 @@
-import tile.Tile;
-
-import java.util.Collections;
+import input.CommandHandler;
+import input.ValidCommand;
 
 public class ZelPokApplication
 {
     public static void main(String[] args)
     {
-        Tile tile = new Tile(Collections.emptyList());
-        playTile(tile);
-    }
+        while (true)
+        {
+            CommandHandler commandHandler = new CommandHandler();
+            ValidCommand validCommand = commandHandler.handleCommand();
 
-    private static void playTile(Tile tile)
-    {
-        tile.displayIntro();
+            System.out.println(validCommand);
+        }
     }
 }
