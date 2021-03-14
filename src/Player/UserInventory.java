@@ -22,6 +22,9 @@ public class UserInventory {
 
     public void remove(Item itemToBeRemoved){
                 inventory.remove(itemToBeRemoved);
-        }
+    }
 
+    public void inventory(){
+        System.out.println(inventory.iterator().next().name);
+    }
 }

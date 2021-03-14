@@ -1,19 +1,23 @@
 package tile;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Tile
 {
-    private final List<Item> items;
+    private final List<Item> items = new ArrayList<>();
     private String tileDescription;
     boolean north;
     boolean south;
     boolean east;
     boolean west;
 
-    public Tile(List<Item> items, String tileDescription, boolean north, boolean south, boolean east, boolean west)
+    public Tile()
     {
-        this.items = items;
+    }
+
+    public Tile(String tileDescription, boolean north, boolean south, boolean east, boolean west)
+    {
         this.tileDescription = tileDescription;
         this.north = north;
         this.south = south;
